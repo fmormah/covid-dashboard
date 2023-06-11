@@ -1,0 +1,82 @@
+.search-box {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 25px #000;
+
+  .serach-panel {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @media (max-width: $mediaBreakPoint) {
+      margin-left: 0;
+    }
+  }
+
+  h1 {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    color: #0b7373;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: $mediaBreakPoint) {
+      text-align: left;
+    }
+
+    span {
+      position: relative;
+      top: -2px;
+      margin-left: 10px;
+
+      @media (max-width: $mediaBreakPoint) {
+        display: block;
+        margin-left: 0;
+        margin-top: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .sort-option,
+  .search-input {
+    white-space: nowrap;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  .search-input {
+    flex: 1 0 40%;
+    max-width: 100%;
+    font-size: 16px;
+    text-transform: none;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 33px;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-size: 25px 25px;
+    background-position: left 0 top 0;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='800px' height='800px' viewBox='0 0 24 24' version='1.1'%3E%3Ctitle%3ESearch%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Search'%3E%3Crect id='Rectangle' fill-rule='nonzero' x='0' y='0' width='24' height='24'%3E%3C/rect%3E%3Ccircle id='Oval' stroke='%230C0310' stroke-width='2' stroke-linecap='round' cx='11' cy='11' r='7'%3E%3C/circle%3E%3Cline x1='16' y1='17' x2='19' y2='20' id='Path' stroke='%230C0310' stroke-width='2' stroke-linecap='round'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    @media (max-width: $mediaBreakPoint) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sort-option {
+    flex: 1 0 20%;
+  }
+}

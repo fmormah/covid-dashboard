@@ -1,0 +1,174 @@
+.patient-list {
+  padding: 0 15px;
+
+  .vaccine-highlight-panel {
+    text-align: center;
+
+    button {
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: #000;
+      color: #fff;
+      transition: 0.2s;
+      font-size: 16px;
+      cursor: pointer;
+
+      &.is-active,
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  .patient-item {
+    border: 1px solid black;
+    margin: 15px auto 0;
+    box-sizing: border-box;
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 700px;
+    transition: 0.2s;
+    border: 3px solid transparent;
+    background-color: #bee8e1;
+    cursor: pointer;
+
+    &.even-item {
+      background-color: #a6e0e0;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+
+      .item-cta {
+        opacity: 1;
+      }
+    }
+  }
+
+  .patient-item {
+
+    h3,
+    p {
+      display: inline-block;
+      width: 40%;
+      font-size: 14px;
+      margin-right: 5%;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+
+      @media (max-width: 400px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .pfizer-text,
+  .astrazeneca-text {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    width: 92px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+    background-color: #0177B9;
+
+    @media (max-width: 550px) {
+      margin-left: 0;
+    }
+  }
+
+  .astrazeneca-text {
+    background-color: #C6951C;
+  }
+
+  .highlighted {
+    border: 3px solid black;
+  }
+
+  .faded {
+    opacity: 0.2;
+  }
+}
+
+.item-cta {
+  position: absolute;
+  right: 10px;
+  top: 10%;
+  width: 7%;
+  height: 80%;
+  background-color: transparent;
+  opacity: 0.3;
+  transition: 0.2s;
+  border: none;
+  border-left: 1px solid black;
+  cursor: pointer;
+
+  span {
+    font-size: 17px;
+    transform: scale(1, 1.9);
+    position: relative;
+    display: block;
+    color: #000;
+    text-align: right;
+  }
+}
+
+.patient-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  z-index: 2;
+}
+
+.selected-patient {
+  padding: 30px;
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  border-radius: 10px;
+
+  .close-btn {
+    border: 1px solid black;
+    border-radius: 100%;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    float: right;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  h3,
+  p {
+    margin: 10px 0;
+  }
+
+}

@@ -1,0 +1,8 @@
+.app {
+  width: 100%;
+  margin: 0 auto;
+}
+@import "../components/SearchBox/SearchBox.scss";
+@import "../components/SortOptions/SortOptions.scss";
+@import "../components/Pagination/Pagination.scss";
+@import "../components/PatientList/PatientList.scss";

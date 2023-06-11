@@ -1,0 +1,82 @@
+@import "./reset";
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  color: #000;
+  background-image: linear-gradient(to bottom right, #fff, #c0e8e2);
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  &:after {
+    content: "";
+    background-image: url("../img/bg.png");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    z-index: -2;
+    opacity: 0.7;
+  }
+}
+$mediaBreakPoint: 600px;
+.hide-desktop {
+  @media (min-width: $mediaBreakPoint) {
+    display: none;
+  }
+}
+.hide-mobile {
+  @media (max-width: $mediaBreakPoint) {
+    display: none;
+  }
+}
+@keyframes bounce-anim-frames {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+.bounce-anim {
+  animation: bounce-anim-frames 0.3s linear 1;
+}
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 680px 104px;
+  display: inline-block;
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderShimmer;
+  animation-timing-function: linear;
+  height: 15px;
+  width: 40%;
+  background-color: #eee;
+  opacity: 0.7;
+  margin: 5px 5%;
+}
+@import "./App.scss";
